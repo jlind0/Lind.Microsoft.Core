@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Lind.Core.Tests
+namespace Lind.Microsoft.Core.Tests
 {
     public class Audit
     {
@@ -17,10 +17,10 @@ namespace Lind.Core.Tests
         public string LastName { get; set; }
     }
     [TestClass]
-    public class UnitTest1
+    public class NotNullReferenceTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void StandardNotNullReferece_Affirmative()
         {
             Audit audit = new Audit(new Person() { FirstName = "James", LastName = "Bond"});
             audit.Auditor += new Person() { FirstName = "Jason", LastName = "Lind" };

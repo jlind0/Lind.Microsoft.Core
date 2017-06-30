@@ -7,8 +7,8 @@
     <ProjectGuid>{21439149-6D10-43B0-BD3A-9FDBB88C7BC3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Lind.Core.Tests</RootNamespace>
-    <AssemblyName>Lind.Core.Tests</AssemblyName>
+    <RootNamespace>Lind.Microsoft.Core.Tests</RootNamespace>
+    <AssemblyName>Lind.Microsoft.Core.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -48,16 +48,16 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="NotNullReferenceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Lind.Core\Lind.Core.csproj">
+    <ProjectReference Include="..\Lind.Core\Lind.Microsoft.Core.csproj">
       <Project>{4c0895d8-0f40-42c8-a803-5bfd3571f65f}</Project>
-      <Name>Lind.Core</Name>
+      <Name>Lind.Microsoft.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

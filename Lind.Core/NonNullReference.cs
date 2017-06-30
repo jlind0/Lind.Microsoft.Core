@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.ComponentModel;
 
-namespace Lind.Core
+namespace Lind.Microsoft.Core
 {
     public interface INonNullReference : INotifyPropertyChanged, INotifyPropertyChanging { }
     public interface IONonNullReference<out T> : INonNullReference
