@@ -5,24 +5,20 @@ namespace Lind.Microsoft.Core
 {
     public interface INonNullReference : INotifyPropertyChanged, INotifyPropertyChanging { }
     public interface IONonNullReference<out T> : INonNullReference
-        where T: class
     {
         T Value { get; }
     }
     public interface IINonNullReference<in T> : INonNullReference
-        where T: class
     {
         T Value { set; }
     }
     public interface INonNullReference<T> : IONonNullReference<T>, IINonNullReference<T>
-        where T: class
     { }
     public struct NonNullReference<T> : INonNullReference<T>
-        where T : class
     {
         public NonNullReference(T initial)
         {
-            value = initial ?? throw new NullReferenceException();
+            value = initial.TestForNull();
             PropertyChanged = null;
             PropertyChanging = null;
         }
@@ -37,7 +33,7 @@ namespace Lind.Microsoft.Core
             set
             {
                 PropertyChanging?.Invoke(this, new PropertyChangingEventArgs("Value"));
-                this.value = value ?? throw new NullReferenceException();
+                this.value = value.TestForNull();
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Value"));
             }
         }
